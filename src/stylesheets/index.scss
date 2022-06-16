@@ -7,18 +7,23 @@
 
   html{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
   }
 
  *,
  *::before,
  *::after{
-   box-sizing: inherit;
+   box-sizing: border-box;
    }
 
 
   body{
     overflow-x: hidden;
+    max-width: 1272px;
+    margin: 0 auto;
+    position: relative;
   }
 
   header {
@@ -67,8 +72,8 @@
       color: $black;
       position: absolute;
       top: -2em;
-      left: -1em;
-      padding-left: 10em;
+      left: -2rem;
+      padding-left: 9em;
       padding-right: 3em;
       display: none;
     }
@@ -131,22 +136,23 @@
 }
 
 .carousel-text-container{
-  width: 20em;
+  width: 20.5em;
   height: 20em;
   margin: 4em auto 1em;
   position: relative;
 
 
   .carousel-title{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
     display: none;
   }
 
   .carousel-paragraph{
     color: $dark-gray;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.25;
     position: absolute;
     display: none;
@@ -200,7 +206,7 @@
 
 
 .about-section{
-  margin: 1.5em auto;
+  margin: 1.5em auto 0;
 
   .about-img-dark{
     width: 100%;
@@ -252,7 +258,12 @@
   z-index: 1000;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1030px){
+
+  body{
+     overflow-y: hidden;
+     max-width: 1300px;
+  }
 
   header{
     width: 21.5em;
@@ -301,10 +312,6 @@
           transition: transform 250ms ease-in-out;
           margin-top: .5em;
       }
-
-
-
-
   }
 
 
@@ -314,8 +321,8 @@
   }
 
   .carousel-images-container{
-    width: 57%;
-    height: 65vh;
+    width: 57.75%;
+    height: 60vh;
     display: inline-block;
     position: relative;
 
@@ -358,7 +365,7 @@
     }
 
     .carousel-paragraph{
-      margin: 0;
+      margin: 0.8em 0 0;
       font-size: 12px;
       bottom: 3rem;
       display: none;
@@ -403,7 +410,7 @@
 
   .about-section{
     display: flex;
-    height: 35vh;
+    height: 40vh;
     margin: 0;
 
     .about-img-dark,
@@ -412,13 +419,14 @@
     }
 
     .about-img-dark{
-      width: 23em;
+      width: calc(min(38em, 32%));
     }
 
     .about-text{
       height: 10em;
       width: 25em;
       margin: 3em auto 0;
+      padding: 0 1rem;
 
       h3{
         font-size: 0.8rem;
@@ -431,7 +439,7 @@
     }
 
     .about-img-light{
-      width: 26.65em;
+      width: calc(min(33%, 30em));
     }
   }
 
